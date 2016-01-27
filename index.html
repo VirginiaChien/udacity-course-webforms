@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quiz - One Big, Ugly Form</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <header>
+    <span class="company-name">🂡 Cam's Company 🂡</span>
+    <span class="company-page">Checkout Page</span>
+  </header>
+  <form autocomplete="on">
+  <section class="progress-bar">
+   <progress value="22" max="100"></progress>
+  </section>
+  <section class="form">
+    <h3>Information</h3>
+    <label>First Name<input type="text" name="fname"></label>
+    <label>Last Name<input type="text" name="lname"></label>
+    <label>Gender
+    <select name="gender">
+        <option>Male</option>
+        <option>Female</option>
+    </select>
+    </label>
+    <label>Email Address<input type="text" name="email"></label>
+    <label>Subsribe Newsletter?<input class="inline" type="checkbox"></label>
+    <h3>Your Shipping Address</h3>
+    <label>Company<input type="text" name="company"></label>
+    <label>Address Line 1<input type="text" name="add1"></label>
+    <label>Address Line 2<input type="text" name="add2"></label>
+    <label>City<input type="text" name="city"></label>
+    <label>State/Province<input type="text" name="state"></label>
+    <label>Postal Code<input type="text" name="post"></label>
+    <label>Country<input type="text" name="country"></label>
+    <h3>Your Credit Card Information</h3>
+    <div class="cc-warning"><em>Note: don't enter any actual credit card info!</em></div>
+    <label>Credit Card Number<input type="text" name="cc-number"></label>
+    <label>Credit Card Type
+      <select name="cc">
+        <option>Visa</option>
+        <option>American Express</option>
+        <option>Mastercard</option>
+        <option>Discover</option>
+      </select>
+    </label>
+    <label>Expiration Date<input name="cc-exp" id="frmCCExp" required placeholder="MM-YYYY" autocomplete="cc-exp"></label>
+    <label>CVV<input type="number"></label>
+  </section>
+  <section class="order-review">
+    <h3>Your Order</h3>
+    <table class="your-order">
+      <tr class="headings">
+        <td>Product</td>
+        <td>Quantity</td>
+        <td>Price</td>
+        <td>Total</td>
+      </tr>
+      <tr>
+        <td>Game Console 2015</td>
+        <td>1</td>
+        <td>$500.00</td>
+        <td>$500.00</td>
+      </tr>
+      <tr>
+        <td>Platformer Bros 3D</td>
+        <td>1</td>
+        <td>$50.00</td>
+        <td>$50.00</td>
+      </tr>
+      <tr class="total">
+        <td>Total</td>
+        <td>$550.00</td>
+      </tr>
+    </table>
+    <label class="check-correct">Is your order correct?
+      <input type="checkbox">
+    </label>
+    <input id="submit" type="submit">
+  </section>
+  <script>
+    var submit = document.querySelector('#submit');
+    submit.onclick = function () {
+      alert("All of your information was valid, right? I'll just go ahead and assume that it is ;)\n\nThanks for your submission!");
+    };
+  </script>
+    </form>
+</body>
+</html>
